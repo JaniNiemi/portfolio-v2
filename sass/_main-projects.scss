@@ -1,0 +1,78 @@
+.main-projects {
+    display: flex;
+    flex-direction: column;
+    max-width: 120rem;
+    margin: 5rem auto;
+    padding: 5rem 2rem 10rem 2rem;
+    
+    &__heading {
+        text-align: center;
+        margin-bottom: 10rem;
+    }
+
+    
+    &__project {
+        display: flex;
+        flex-direction: row;
+
+        &:not(:first-of-type) {
+            margin-top: 15rem;
+        }
+    }
+    
+    &__image {
+        max-width: 40rem;
+        filter: brightness(75%) opacity(40%);
+        position: relative;
+        z-index: 1;
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.5);
+        transition: all .8s;
+        
+        &--left {
+            margin-right: -15rem;
+            transform: perspective(40rem) rotateY(25deg);   
+        }
+        &--right {
+            margin-left: -15rem;
+            transform: perspective(40rem) rotateY(-25deg);   
+        }
+
+        &:hover {
+            z-index: 99;
+            filter: brightness(90%) opacity(99%);
+            transform: perspective(0) rotateY(0) scale(1.1);    
+        }
+    }
+
+    &__text-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        z-index: 10;
+    }
+
+    &__client {
+        text-align: center;
+    }
+
+    &__text {
+        font-size: 1.6rem;
+    }
+
+    &__link,
+    &__link:link,
+    &__link:visited {
+        color: $color-light-2;
+        font-size: 1.8rem;
+        text-decoration: none;
+        position: relative;
+        align-self: center;
+
+        vertical-align: middle
+    }
+
+    &__link {
+        @include underline;
+    }
+}

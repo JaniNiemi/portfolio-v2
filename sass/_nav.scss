@@ -1,0 +1,37 @@
+.nav {
+    padding: 2rem 8rem;
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+    background-color: $color-primary;
+
+    &__logo {
+        height: 5rem;
+    }
+
+    &__list {
+        list-style-type: none;
+        display: flex;
+    }
+
+    &__item {
+        position: relative;
+
+        &:not(:last-child) {
+            margin-right: 3rem;
+        }
+
+        @include underline;
+    }
+
+    &__link,
+    &__link:link,
+    &__link:visited {
+        font-size: 1.8rem;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio - Jani Niemi">
+    <meta name="keywords" content="Portfolio, Web design, Web-suunnittelija, Web developer, Web-kehittäjä, HTML, CSS, JavaScript">
+    <!-- Fetch favicon from another website -->
+    <link rel="icon" type="image/png" href="https://www.google.com/s2/u/0/favicons?domain=jtniemi.net" />
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="sass/main.css">
+    <title>Jani Niemi - Portfolio</title>
+</head>
+<body>
+    <nav class="nav">
+        <img src="images/logo.svg" alt="JTNiemi Designs logo" class="nav__logo">
+        <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">Profiili</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Asiakastyöt</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Muut työt</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Yhteystiedot</a></li>
+        </ul>
+    </nav>
+    
+    <!-- PROFILE -->
+    <main class="profile">
+        <img src="images/jani_c.jpg" alt="Jani profile image" class="profile__img">
+        <div class="profile__text-container">
+            <h1 class="profile__heading">
+                Jani Niemi - Portfolio
+            </h1>
+            <p class="profile__text">
+                Olen Jani Niemi, 29-vuotias web-kehittäjä Porista. Kävin Eurajoen kristillisessä opistossa audiovisuaalisen viestinnän ammattitutkinnon ja valmistuin toukokuussa 2016. Aloitin tieto- ja viestintätekniikan ammattitutkinnon Porin Winnovassa syksyllä 2018 ja valmistuin syksyllä 2020.
+            </p>
+
+            <p class="profile__text">
+                Vahvuuksiini kuuluu front end -työskentely, mutta olen myös tehnyt back end -hommia. Hallitsen HTML5, Bootstrap, CSS, JavaScript kielet ja olen myös tuttu php:n, node.js:n ja scss:n kanssa.
+            </p>
+
+            <p class="profile__text">
+                Sivun alareunasta löydät ansioluetteloni suomeksi ja englanniksi.
+            </p>
+
+            <p class="profile__text">
+                Jos haluat ottaa minuun yhteyttä, löydät yhteystietoni yhteystiedot-sivulta, tai voit lähettää viestin yhteystiedot-sivun lomakkeella. Jätäthän yhteystietosi lomakkeeseen, jos haluat, että otan sinuun yhteyttä takaisin.
+            </p>
+
+            <a href="https://github.com/JaniNiemi" class="profile__link" target="_blank">Tutustu minun GitHub -sivuun &rarr;</a>
+        </div>
+    </main>
+    
+    <!-- MAIN PROJECTS -->
+    <section class="main-projects">
+        <h2 class="main-projects__heading">Asiakastyöt</h2>
+
+        <!-- PROJECT 1 -->
+        <div class="main-projects__project">
+            <img src="images/asennusmniemi.png" alt="asennus M. Niemi screenshot" class="main-projects__image main-projects__image--left">
+            <div class="main-projects__text-container">
+                <h3 class="main-projects__client">Asennus M. Niemi</h3>
+                <p class="main-projects__text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi libero ex eligendi qui aperiam incidunt maiores labore laudantium dolorum perspiciatis?
+                </p>
+                <a href="#" class="main-projects__link">Tutustu asiakkaan sivuun &rarr;</a>
+            </div>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div class="main-projects__project">
+            <div class="main-projects__text-container">
+                <h3 class="main-projects__client">Monipalvelu Halonen</h3>
+                <p class="main-projects__text">
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi libero ex eligendi qui aperiam incidunt maiores labore laudantium dolorum perspiciatis?
+                </p>
+                <a href="#" class="main-projects__link">Tutustu asiakkaan sivuun &rarr;</a>
+            </div>
+            <img src="images/monipalveluhalonen.png" alt="asennus M. Niemi screenshot" class="main-projects__image main-projects__image--right">
+        </div>
+    </section>
+
+    <!-- SIDE PROJECTS -->
+    <section class="side-projects">
+        <h2 class="side-projects__heading">Sivuprojektit ja muut työt</h2>
+
+        <div class="side-projects__container">
+            <!-- TRIVIA-GAME -->
+            <div class="side-projects__card trivia-game">
+                <a href="https://janiniemi.github.io/trivia-game/" class="side-projects__text" target="_blank">Trivia peli</a>
+            </div>
+
+            <!-- TO-DO-APP -->
+            <div class="side-projects__card to-do-app">
+                <a href="https://janiniemi.github.io/to-do-app/" class="side-projects__text" target="_blank">To-Do -lista</a>
+            </div>
+
+            <!-- FICOLO -->
+            <div class="side-projects__card ficolo">
+                <a href="https://solar.ficolo.net/" class="side-projects__text" target="_blank">Aurinkopaneelien status-sivu. Koulun työharjoittelun projekti</a>
+            </div>
+
+            <!-- REPOSAAREN VPK -->
+            <div class="side-projects__card reposaari">
+                <a href="http://www.reposaarenvpk.com/" class="side-projects__text" target="_blank">WordPress -sivusto. Koulun työharjoittelun projekti</a>
+            </div>
+
+            <!-- REACT NOTES APP -->
+            <div class="side-projects__card react-notes">
+                <a href="https://eroded-passivation.000webhostapp.com/" class="side-projects__text" target="_blank">React muistilappu-sovellus</a>
+            </div>
+
+            <!-- TURBO LOGO -->
+            <div class="side-projects__card turbo">
+                <a href="https://jtniemi.net/wp-content/uploads/2016/11/LOGO_III.png" class="side-projects__text" target="_blank">Bändin logo</a>
+            </div>
+
+            <!-- TURBO LOGO B&W -->
+            <div class="side-projects__card turbo-bw">
+                <a href=https://jtniemi.net/wp-content/uploads/2016/11/LOGO_I.png class="side-projects__text" target="_blank">Bändin logo mustavalkoisena</a>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
