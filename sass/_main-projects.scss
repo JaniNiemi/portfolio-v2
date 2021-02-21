@@ -30,17 +30,19 @@
         
         &--left {
             margin-right: -15rem;
+            margin-left: 1.5rem;
             transform: perspective(40rem) rotateY(25deg);   
         }
         &--right {
             margin-left: -15rem;
+            margin-right: 1.5rem;
             transform: perspective(40rem) rotateY(-25deg);   
         }
 
         &:hover {
             z-index: 99;
             filter: brightness(90%) opacity(99%);
-            transform: perspective(0) rotateY(0) scale(1.1);    
+            transform: perspective(0) rotateY(0) scale(1.1);
         }
     }
 

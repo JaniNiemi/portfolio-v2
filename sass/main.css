@@ -10,6 +10,12 @@ html {
   font-size: 62.5%;
 }
 
+@media screen and (max-width: 62.5em) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body {
   background-color: #d4dad3;
   overflow-x: hidden;
@@ -50,6 +56,14 @@ h3 {
   background-color: #020f00;
 }
 
+@media screen and (max-width: 62.5em) {
+  .nav {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .nav__logo {
   height: 5rem;
 }
@@ -59,6 +73,12 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@media screen and (max-width: 62.5em) {
+  .nav__list {
+    display: none;
+  }
 }
 
 .nav__item {
@@ -222,12 +242,14 @@ h3 {
 
 .main-projects__image--left {
   margin-right: -15rem;
+  margin-left: 1.5rem;
   -webkit-transform: perspective(40rem) rotateY(25deg);
           transform: perspective(40rem) rotateY(25deg);
 }
 
 .main-projects__image--right {
   margin-left: -15rem;
+  margin-right: 1.5rem;
   -webkit-transform: perspective(40rem) rotateY(-25deg);
           transform: perspective(40rem) rotateY(-25deg);
 }
@@ -370,6 +392,7 @@ h3 {
       -ms-flex-align: center;
           align-items: center;
   outline: none;
+  -webkit-tap-highlight-color: transparent;
   -webkit-transition: all .3s;
   transition: all .3s;
 }

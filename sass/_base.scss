@@ -48,8 +48,15 @@ $color-dark: rgb(0, 5, 0);
     background-position: center;
 }
 
+// RESPONSIVE BREAKPOINTS
+$bp-large: 62.5em;  //1000px
+
 html {
     font-size: 62.5%;
+
+    @media screen and (max-width: $bp-large) {
+        font-size: 50%;
+    }
 }
 
 body {
