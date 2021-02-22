@@ -6,8 +6,13 @@
     justify-content: space-between;
     background-color: $color-primary;
 
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
     @media screen and (max-width:$bp-large) {
         justify-content: center;
+        position: static;
     }
 
     &__logo {

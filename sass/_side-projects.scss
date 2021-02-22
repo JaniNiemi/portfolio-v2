@@ -2,8 +2,7 @@
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 10rem 2rem;
-    color: #fafafa;
+    color: $font-white;
 
     @include background-image("../images/side-projects_bg.jpg");
 
@@ -26,7 +25,7 @@
         height: 25rem;
         margin: .5rem;
         background-color: rgba(#fff, 0.25);
-        border: 0 solid rgba(#fafafa, 0);
+        border: 0 solid rgba($font-white, 0);
         border-radius: 1rem;
 
         transition: all .3s;
@@ -34,7 +33,7 @@
         &:hover {
             transform: scale(1.15);
             background-color: rgba(#fff, 0.5);
-            border: 2px solid rgba(#fafafa, 0.7);
+            border: 2px solid rgba($font-white, 0.7);
             box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.8);
         }
     }
@@ -43,7 +42,7 @@
     &__text:link,
     &__text:visited {
         font-size: 2.4rem;
-        color: rgba(#fafafa, .9);
+        color: rgba($font-white, .9);
         text-decoration: none;
 
         display: flex;
@@ -57,7 +56,7 @@
     }
 
     &__text:hover {
-        color: rgba(#fafafa, 1);
+        color: rgba($font-white, 1);
     }
 }
 

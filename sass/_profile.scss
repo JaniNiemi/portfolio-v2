@@ -4,8 +4,7 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 6rem 2rem;
-    color: #fafafa;
+    color: $font-white;
 
     @include background-image("../images/profile_bg.jpg");
 
@@ -47,5 +46,56 @@
 
     &__link {
         @include underline;
+        transition: all .5s;
+
+        &:hover {
+            color: $font-white;
+        }
+    }
+
+    &__cta {
+        display: flex;
+        background-color: rgba($color-light, 0.8);
+        color: $font-white;
+        font-size: 2.3rem;
+        text-decoration: none;
+
+        margin: 4rem auto 0 auto;
+        justify-content: center;
+        align-items: center;
+
+        width: 22rem;
+        height: 5rem;
+        border-radius: 2rem;
+
+        position: relative;
+        z-index: 10;
+        transition: all 0.5s;
+        box-shadow: none;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: block;
+            background-color: $color-light;
+            border-radius: 2rem;
+            z-index: -1;
+            opacity: 0.6;
+
+            transition: all 0.5s;
+        }
+
+        &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 1rem 1rem rgba($font-white, 0.05);
+            &::before {
+                transform: scale(1.5);
+                opacity: 0;
+            }
+        }
     }
 }

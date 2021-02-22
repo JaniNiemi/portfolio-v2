@@ -14,8 +14,12 @@ $color-light: rgb(65, 173, 38);
 $color-light-2: rgb(38, 114, 19);
 $color-dark: rgb(0, 5, 0);
 
+$font-white: #fafafa;
+$font-dark: rgb(15, 15, 15);
+
 // MIXINS
 @mixin underline {
+    position: relative;
     &::after {
         content: "";
         position: absolute;
@@ -55,11 +59,15 @@ html {
     font-size: 62.5%;
 
     @media screen and (max-width: $bp-large) {
-        font-size: 50%;
+        font-size: 55%;
     }
 }
 
 body {
     background-color: #d4dad3;
     overflow-x: hidden;
+}
+
+main, section, footer {
+    padding: 10rem 2rem;
 }
