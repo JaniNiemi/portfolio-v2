@@ -22,7 +22,7 @@ body {
 }
 
 main, section, footer {
-  padding: 10rem 2rem;
+  padding: 9rem 2rem;
 }
 
 body {
@@ -92,6 +92,7 @@ h3 {
 
 .nav__item {
   position: relative;
+  cursor: pointer;
   position: relative;
 }
 
@@ -281,6 +282,7 @@ h3 {
   max-width: 120rem;
   margin: 0 auto;
   color: #0f0f0f;
+  position: relative;
 }
 
 .main-projects__heading {
@@ -304,14 +306,29 @@ h3 {
 
 .main-projects__image {
   max-width: 40rem;
-  -webkit-filter: brightness(75%) opacity(40%);
-          filter: brightness(75%) opacity(40%);
+  height: 100%;
+  -webkit-filter: brightness(75%);
+          filter: brightness(75%);
+  opacity: .35;
   position: relative;
   z-index: 1;
   -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
           box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
   -webkit-transition: all .8s;
   transition: all .8s;
+}
+
+@media screen and (max-width: 62.5em) {
+  .main-projects__image {
+    pointer-events: none;
+  }
+}
+
+@media screen and (max-width: 37.5em) {
+  .main-projects__image {
+    height: 20rem;
+    opacity: .07;
+  }
 }
 
 .main-projects__image--left {
@@ -328,12 +345,19 @@ h3 {
           transform: perspective(40rem) rotateY(-25deg);
 }
 
+@media screen and (max-width: 37.5em) {
+  .main-projects__image--right {
+    margin-left: auto;
+  }
+}
+
 .main-projects__image:hover {
   z-index: 99;
-  -webkit-filter: brightness(90%) opacity(99%);
-          filter: brightness(90%) opacity(99%);
-  -webkit-transform: perspective(0) rotateY(0) scale(1.1);
-          transform: perspective(0) rotateY(0) scale(1.1);
+  -webkit-filter: brightness(90%);
+          filter: brightness(90%);
+  opacity: .99;
+  -webkit-transform: perspective(40rem) rotateY(0) scale(1.1);
+          transform: perspective(40rem) rotateY(0) scale(1.1);
   -webkit-box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4);
           box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4);
 }
@@ -351,6 +375,15 @@ h3 {
           justify-content: space-between;
   position: relative;
   z-index: 10;
+}
+
+@media screen and (max-width: 37.5em) {
+  .main-projects__text-container {
+    position: absolute;
+    height: 20rem;
+    text-align: center;
+    margin-right: 2rem;
+  }
 }
 
 .main-projects__client {
@@ -440,11 +473,19 @@ h3 {
   width: 25rem;
   height: 25rem;
   margin: .5rem;
+  padding: 0.5rem;
   background-color: rgba(255, 255, 255, 0.25);
-  border: 0 solid rgba(250, 250, 250, 0);
+  border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 1rem;
   -webkit-transition: all .3s;
   transition: all .3s;
+}
+
+@media screen and (max-width: 37.5em) {
+  .side-projects__card {
+    width: 18rem;
+    height: 18rem;
+  }
 }
 
 .side-projects__card:hover {
@@ -474,6 +515,12 @@ h3 {
   -webkit-tap-highlight-color: transparent;
   -webkit-transition: all .3s;
   transition: all .3s;
+}
+
+@media screen and (max-width: 37.5em) {
+  .side-projects__text, .side-projects__text:link, .side-projects__text:visited {
+    font-size: 2rem;
+  }
 }
 
 .side-projects__text:hover {

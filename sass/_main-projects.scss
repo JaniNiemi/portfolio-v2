@@ -4,6 +4,7 @@
     max-width: 120rem;
     margin: 0 auto;
     color: $font-dark;
+    position: relative;
     
     &__heading {
         text-align: center;
@@ -22,27 +23,43 @@
     
     &__image {
         max-width: 40rem;
-        filter: brightness(75%) opacity(40%);
+        height: 100%;
+        filter: brightness(75%);
+        opacity: .35;
         position: relative;
         z-index: 1;
         box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
         transition: all .8s;
+
+        @media screen and (max-width: $bp-large) {
+            pointer-events: none;
+        }
+
+        @media screen and (max-width: $bp-medium) {
+            height: 20rem;
+            opacity: .07;
+        }
         
         &--left {
             margin-right: -15rem;
             margin-left: 1.5rem;
-            transform: perspective(40rem) rotateY(25deg);   
+            transform: perspective(40rem) rotateY(25deg);
         }
         &--right {
             margin-left: -15rem;
             margin-right: 1.5rem;
-            transform: perspective(40rem) rotateY(-25deg);   
+            transform: perspective(40rem) rotateY(-25deg);
+
+            @media screen and (max-width: $bp-medium) {
+                margin-left: auto;
+            }
         }
 
         &:hover {
             z-index: 99;
-            filter: brightness(90%) opacity(99%);
-            transform: perspective(0) rotateY(0) scale(1.1);
+            filter: brightness(90%);
+            opacity: .99;
+            transform: perspective(40rem) rotateY(0) scale(1.1);
             box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4);
         }
     }
@@ -53,6 +70,13 @@
         justify-content: space-between;
         position: relative;
         z-index: 10;
+
+        @media screen and (max-width: $bp-medium) {
+            position: absolute;
+            height: 20rem;
+            text-align: center;
+            margin-right: 2rem;
+        }
     }
 
     &__client {

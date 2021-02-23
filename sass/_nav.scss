@@ -30,6 +30,7 @@
 
     &__item {
         position: relative;
+        cursor: pointer;
 
         &:not(:last-child) {
             margin-right: 3rem;

@@ -24,11 +24,17 @@
         width: 25rem;
         height: 25rem;
         margin: .5rem;
+        padding: 0.5rem;
         background-color: rgba(#fff, 0.25);
-        border: 0 solid rgba($font-white, 0);
+        border: 1px solid rgba($font-white, 0.2);
         border-radius: 1rem;
 
         transition: all .3s;
+
+        @media screen and (max-width: $bp-medium) {
+            width: 18rem;
+            height: 18rem;
+        }
 
         &:hover {
             transform: scale(1.15);
@@ -53,6 +59,10 @@
         -webkit-tap-highlight-color: transparent;
 
         transition: all .3s;
+
+        @media screen and (max-width: $bp-medium) {
+            font-size: 2rem;
+        }
     }
 
     &__text:hover {

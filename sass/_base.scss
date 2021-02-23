@@ -53,7 +53,8 @@ $font-dark: rgb(15, 15, 15);
 }
 
 // RESPONSIVE BREAKPOINTS
-$bp-large: 62.5em;  //1000px
+$bp-large: 62.5em;      //1000px
+$bp-medium: 37.5em;     //600px
 
 html {
     font-size: 62.5%;
@@ -69,5 +70,5 @@ body {
 }
 
 main, section, footer {
-    padding: 10rem 2rem;
+    padding: 9rem 2rem;
 }
