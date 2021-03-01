@@ -15,12 +15,21 @@
 <body>
     <nav class="nav">
         <img src="images/logo.svg" alt="JTNiemi Designs logo" class="nav__logo">
-        <ul class="nav__list">
-            <li class="nav__item"><a class="nav__link" id="nav-profile">Profiili</a></li>
-            <li class="nav__item"><a class="nav__link" id="nav-projects">Asiakastyöt</a></li>
-            <li class="nav__item"><a class="nav__link" id="nav-side-projects">Muut työt</a></li>
-            <li class="nav__item"><a class="nav__link" id="nav-contact">Yhteystiedot</a></li>
-        </ul>
+        <div class="nav__menu-container" id="menu-container">
+            <div class="nav__backdrop" id="backdrop"></div>
+            <ul class="nav__list">
+                <img src="images/logo.svg" alt="JTNiemi Design logo" class="nav__item--logo">
+                <li class="nav__item" id="nav-profile"><a class="nav__link" >Profiili</a></li>
+                <li class="nav__item" id="nav-projects"><a class="nav__link" >Asiakastyöt</a></li>
+                <li class="nav__item" id="nav-side-projects"><a class="nav__link" >Muut työt</a></li>
+                <li class="nav__item" id="nav-contact"><a class="nav__link" >Yhteystiedot</a></li>
+            </ul>
+        </div>
+        <div class="nav__mobile-menu-toggle" id="menu-toggle">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
     </nav>
     
     <!-- PROFILE -->
@@ -64,7 +73,7 @@
                 <p class="main-projects__text">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi libero ex eligendi qui aperiam incidunt maiores labore laudantium dolorum perspiciatis?
                 </p>
-                <a href="#" class="main-projects__link">Tutustu asiakkaan sivuun &rarr;</a>
+                <a href="https://asennusmniemi.fi/" class="main-projects__link" target="_blank">Tutustu asiakkaan sivuun &rarr;</a>
             </div>
         </div>
 
@@ -75,7 +84,7 @@
                 <p class="main-projects__text">
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi libero ex eligendi qui aperiam incidunt maiores labore laudantium dolorum perspiciatis?
                 </p>
-                <a href="#" class="main-projects__link">Tutustu asiakkaan sivuun &rarr;</a>
+                <a href="https://monipalveluhalonen.fi" class="main-projects__link" target="_blank">Tutustu asiakkaan sivuun &rarr;</a>
             </div>
             <img src="images/monipalveluhalonen.png" alt="asennus M. Niemi screenshot" class="main-projects__image main-projects__image--right">
         </div>

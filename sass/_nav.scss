@@ -1,5 +1,5 @@
 .nav {
-    padding: 2rem 8rem;
+    padding: 2rem 4rem;
     display: flex;
 
     align-items: center;
@@ -10,9 +10,11 @@
     top: 0;
     z-index: 999;
 
+    height: 8.5rem;
+
     @media screen and (max-width:$bp-large) {
-        justify-content: center;
-        position: static;
+        // position: static;
+        padding: 2rem 2rem;
     }
 
     &__logo {
@@ -24,7 +26,20 @@
         display: flex;
 
         @media screen and (max-width: $bp-large) {
-            display: none;
+            // display: none;
+            width: 45vw;
+            position: fixed;
+            z-index: 9999;
+            top: 0;
+            right: 0;
+            height: 100vh;
+
+            flex-direction: column;
+            background-color: rgba($color-light, 0.95);
+
+            transform: translateX(100%);
+
+            transition: all .5s ease-in;
         }
     }
 
@@ -36,7 +51,24 @@
             margin-right: 3rem;
         }
 
-        @include underline;
+        @media screen and (min-width: $bp-large) {
+            @include underline;
+        }
+
+        @media screen and (max-width: $bp-large) {
+            margin: 1.5rem;
+        }
+
+        &--logo {
+            display: none;
+
+            @media screen and (max-width: $bp-large) {
+                display: block;
+                cursor: default;
+                height: 8rem;
+                padding: 0.25rem 0.5rem;
+            }
+        }
     }
 
     &__link,
@@ -47,5 +79,64 @@
         text-decoration: none;
         text-transform: uppercase;
         font-weight: 300;
+
+        @media screen and (max-width: $bp-large) {
+            font-size: 2rem;
+        }
+    }
+
+    &__mobile-menu-toggle {
+        display: none;
+
+        @media screen and (max-width: $bp-large) {
+            display: block;
+            width: 5rem;
+            cursor: pointer;
+            & div {
+                height: 3px;
+                width: 100%;
+                margin: 1rem 0;
+                border-radius: 1rem;
+                background-color: $color-light;
+            }
+        }
+    }
+
+    &__backdrop {
+        @media screen and (max-width: $bp-large) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 8888;
+            opacity: 0;
+    
+            background-color: rgba($color-dark, 0.85);
+            backdrop-filter: blur(0.5rem);
+            
+            transition: all .5s;
+        }
+    }
+
+    &__menu-container {
+        @media screen and (max-width: $bp-large) {
+            visibility: hidden;
+        }
+    }
+
+    @media screen and (max-width: $bp-large) {
+        .open {
+            visibility: visible;
+        }
+    
+        .open &__list {
+            transform: translateX(0);
+        }
+    
+        .open &__backdrop,
+        .open &__list {
+            opacity: 1;
+        }
     }
 }
