@@ -41,6 +41,10 @@
 
             transition: all .5s ease-in;
         }
+
+        @media screen and (max-width: $bp-medium) {
+            width: 70vw;
+        }
     }
 
     &__item {
@@ -66,7 +70,7 @@
                 display: block;
                 cursor: default;
                 height: 8rem;
-                padding: 0.25rem 0.5rem;
+                padding: 0.25rem 1rem;
             }
         }
     }
