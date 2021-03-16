@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio - Jani Niemi">
     <meta name="keywords" content="Portfolio, Web design, Web-suunnittelija, Web developer, Web-kehittäjä, HTML, CSS, JavaScript">
-    <!-- Fetch favicon from another website -->
-    <link rel="icon" type="image/png" href="https://www.google.com/s2/u/0/favicons?domain=jtniemi.net" />
-    <!-- Font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./images/favicon.png">
+    <link rel="icon" sizes="192x192" href="./images/favicon.png">
     <link rel="stylesheet" href="sass/main.css">
     <title>Jani Niemi - Portfolio</title>
 </head>
@@ -57,7 +57,7 @@
 
             <a href="https://github.com/JaniNiemi" class="profile__link" target="_blank">Tutustu minun GitHub -sivuun &rarr;</a>
 
-            <a href="#" class="profile__cta">Ota yhteyttä!</a>
+            <a class="profile__cta" id="cta">Ota yhteyttä!</a>
         </div>
     </main>
     
@@ -71,7 +71,7 @@
             <div class="main-projects__text-container">
                 <h3 class="main-projects__client">Asennus M. Niemi</h3>
                 <p class="main-projects__text">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi libero ex eligendi qui aperiam incidunt maiores labore laudantium dolorum perspiciatis?
+                    Audiovisuaalisen viestinnän tutkinnon työharjoittelun projekti. WordPress-sivusto.
                 </p>
                 <a href="https://asennusmniemi.fi/" class="main-projects__link" target="_blank">Tutustu asiakkaan sivuun &rarr;</a>
             </div>
@@ -82,7 +82,7 @@
             <div class="main-projects__text-container">
                 <h3 class="main-projects__client">Monipalvelu Halonen</h3>
                 <p class="main-projects__text">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Animi libero ex eligendi qui aperiam incidunt maiores labore laudantium dolorum perspiciatis?
+                    Audiovisuaalisen viestinnän tutkinnon työharjoittelun projekti. WordPress-sivusto.
                 </p>
                 <a href="https://monipalveluhalonen.fi" class="main-projects__link" target="_blank">Tutustu asiakkaan sivuun &rarr;</a>
             </div>
@@ -134,8 +134,35 @@
 
     <!-- CONTACT -->
     <section class="contact" id="contact">
-        <h2 class="contact__heading">Yhteystiedot</h2>
-        <p>WIP... Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, accusantium.</p>
+        <h2 class="contact__heading">Ota yhteyttä!</h2>
+        <div class="contact__container">
+            <div class="contact__info-container">
+                <img src="./images/jani_c.jpg" alt="Jani Niemi kuva" class="contact__img">
+                <h3 class="contact__name">Jani Niemi</h3>
+                <p class="contact__info">Puh: (+358) 400 646 069</p>
+                <p class="contact__info">E-mail: janitniemi@gmail.com</p>
+                <p class="contact__info">E-mail: jani.niemi@jtniemi.net</p>
+                <p class="contact__info">Ota yhteyttä puhelimitse, sähköpostilla tai lähetä viesti lomakkeella.</p>
+            </div>
+            <div class="contact__form-container" id="form-container">
+                <form method="POST" class="contact__form form" id="form">
+                    <h3 class="form__heading">Lähetä viesti</h3>
+
+                    <label for="name" class="form__label">Nimi</label>
+                    <input type="text" name="name" id="name" placeholder="Nimi" class="form__input">
+
+                    <label for="email" class="form__label">E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="E-mail" class="form__input">
+
+                    <label for="message">Viesti</label>
+                    <textarea name="message" id="message" rows="4" class="form__message" placeholder="Viesti" required></textarea>
+
+                    <p class="form__notice">*Kirjoitathan sähköpostiosoitteesi viestiin, jos haluat minun ottavan sinuun yhteyttä. Muussa tapauksessa voit jättää sähköpostin tyhjäksi</p>
+
+                    <button type="submit" class="form__btn">Lähetä</button>
+                </form>
+            </div>
+        </div>
     </section>
 
     <footer class="footer">
@@ -145,6 +172,7 @@
             <a href="#" class="footer__cv">CV in english</a>
         </div>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>

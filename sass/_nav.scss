@@ -35,7 +35,7 @@
             height: 100vh;
 
             flex-direction: column;
-            background-color: rgba($color-light, 0.95);
+            background-color: rgba($color-primary, 0.95);
 
             transform: translateX(100%);
 
@@ -60,7 +60,9 @@
         }
 
         @media screen and (max-width: $bp-large) {
-            margin: 1.5rem;
+            margin-top: 1.5rem;
+            margin-left: 2rem;
+            margin-bottom: 2rem;
         }
 
         &--logo {
@@ -82,7 +84,7 @@
         color: #fff;
         text-decoration: none;
         text-transform: uppercase;
-        font-weight: 300;
+        font-weight: 400;
 
         @media screen and (max-width: $bp-large) {
             font-size: 2rem;
@@ -116,7 +118,7 @@
             z-index: 8888;
             opacity: 0;
     
-            background-color: rgba($color-dark, 0.85);
+            background-color: rgba($color-dark, 0.75);
             backdrop-filter: blur(0.5rem);
             
             transition: all .5s;

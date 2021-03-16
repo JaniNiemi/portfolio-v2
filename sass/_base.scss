@@ -74,3 +74,11 @@ body {
 main, section, footer {
     padding: 9rem 2rem;
 }
+
+p {
+    line-height: 1.4;
+}
+
+::selection {
+    background-color: rgba($color-light, .5);
+}
