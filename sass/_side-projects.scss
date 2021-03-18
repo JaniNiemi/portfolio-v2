@@ -67,6 +67,28 @@
     &__text:hover {
         color: rgba($font-white, 1);
     }
+
+    &__link-container {
+        margin-top: 2rem;
+    }
+
+    &__link,
+    &__link:link,
+    &__link:visited {
+        position: relative;
+        font-size: 2rem;
+        color: $color-light;
+        text-decoration: none;
+    }
+
+    &__link {
+        @include underline;
+        transition: all .5s;
+
+        &:hover {
+            color: $font-white;
+        }
+    }
 }
 
 // BACKGROUND IMAGES

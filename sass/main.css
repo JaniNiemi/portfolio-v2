@@ -110,7 +110,7 @@ h3 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    background-color: rgba(2, 15, 0, 0.95);
+    background-color: rgba(11, 53, 11, 0.95);
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
     -webkit-transition: all .5s ease-in;
@@ -127,10 +127,6 @@ h3 {
 .nav__item {
   position: relative;
   cursor: pointer;
-}
-
-.nav__item:not(:last-child) {
-  margin-right: 3rem;
 }
 
 @media screen and (min-width: 62.5em) {
@@ -156,6 +152,9 @@ h3 {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
   }
+  .nav__item:not(:last-child) {
+    margin-right: 3rem;
+  }
 }
 
 @media screen and (max-width: 62.5em) {
@@ -163,6 +162,7 @@ h3 {
     margin-top: 1.5rem;
     margin-left: 2rem;
     margin-bottom: 2rem;
+    text-align: center;
   }
 }
 
@@ -650,6 +650,48 @@ h3 {
   color: #fafafa;
 }
 
+.side-projects__link-container {
+  margin-top: 2rem;
+}
+
+.side-projects__link, .side-projects__link:link, .side-projects__link:visited {
+  position: relative;
+  font-size: 2rem;
+  color: #41ad26;
+  text-decoration: none;
+}
+
+.side-projects__link {
+  position: relative;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.side-projects__link::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0%;
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #41ad26;
+  border-radius: 1rem;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+
+.side-projects__link:hover::after {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.side-projects__link:hover {
+  color: #fafafa;
+}
+
 .trivia-game {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 5, 0, 0.8)), to(rgba(0, 5, 0, 0.8))), url("../images/side-projects/trivia-game.png");
   background-image: linear-gradient(rgba(0, 5, 0, 0.8), rgba(0, 5, 0, 0.8)), url("../images/side-projects/trivia-game.png");
@@ -720,6 +762,8 @@ h3 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  max-width: 120rem;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 62.5em) {
@@ -785,7 +829,7 @@ h3 {
 }
 
 .form__input, .form__message {
-  background-color: #e4e4e4;
+  background-color: #e7e7e7;
   padding: 1.5rem;
   font-size: 1.7rem;
   font-family: inherit;
@@ -811,7 +855,8 @@ h3 {
 }
 
 .form__notice {
-  font-size: 1.2rem;
+  margin-top: .2rem;
+  font-size: 1.3rem;
 }
 
 .form__btn {
@@ -853,8 +898,8 @@ h3 {
 .form__btn:hover {
   -webkit-transform: translateY(-2px);
           transform: translateY(-2px);
-  -webkit-box-shadow: 0 1rem 1rem rgba(250, 250, 250, 0.05);
-          box-shadow: 0 1rem 1rem rgba(250, 250, 250, 0.05);
+  -webkit-box-shadow: 0 1rem 1rem rgba(0, 5, 0, 0.2);
+          box-shadow: 0 1rem 1rem rgba(0, 5, 0, 0.2);
 }
 
 .form__btn:hover::before {

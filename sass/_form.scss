@@ -16,7 +16,7 @@
 
     &__input, 
     &__message {
-        background-color: rgb(228, 228, 228);
+        background-color: rgb(231, 231, 231);
         padding: 1.5rem;
         font-size: 1.7rem;
         font-family: inherit;
@@ -41,7 +41,8 @@
 
 
     &__notice {
-        font-size: 1.2rem;
+        margin-top: .2rem;
+        font-size: 1.3rem;
     }
 
     &__btn {
@@ -80,7 +81,7 @@
 
         &:hover {
             transform: translateY(-2px);
-            box-shadow: 0 1rem 1rem rgba($font-white, 0.05);
+            box-shadow: 0 1rem 1rem rgba($color-dark, 0.2);
             &::before {
                 transform: scale(1.4);
                 opacity: 0;

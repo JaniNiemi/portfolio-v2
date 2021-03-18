@@ -35,7 +35,7 @@
             height: 100vh;
 
             flex-direction: column;
-            background-color: rgba($color-primary, 0.95);
+            background-color: rgba($color-secondary, 0.95);
 
             transform: translateX(100%);
 
@@ -51,18 +51,18 @@
         position: relative;
         cursor: pointer;
 
-        &:not(:last-child) {
-            margin-right: 3rem;
-        }
-
         @media screen and (min-width: $bp-large) {
             @include underline;
+            &:not(:last-child) {
+                margin-right: 3rem;
+            }
         }
 
         @media screen and (max-width: $bp-large) {
             margin-top: 1.5rem;
             margin-left: 2rem;
             margin-bottom: 2rem;
+            text-align: center;
         }
 
         &--logo {
