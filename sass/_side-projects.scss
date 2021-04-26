@@ -92,8 +92,12 @@
 }
 
 // BACKGROUND IMAGES
+.coach-finder {
+    @include side-project-card-bg("../images/side-projects/coach-finder.png");
+}
+
 .trivia-game {
-    @include side-project-card-bg("../images/side-projects/trivia-game.png")
+    @include side-project-card-bg("../images/side-projects/trivia-game.png");
 }
 
 .to-do-app {

@@ -64,15 +64,12 @@ form.addEventListener("submit", (e) => {
     });
 });
 
-
-
 function menuToggle() {
     menuContainer.classList.toggle("open");
 }
 
 // Event listeners
 document.querySelectorAll(".nav__item").forEach((item) => item.addEventListener("click", menuToggle));
-
 navBackdrop.addEventListener("click", menuToggle)
 menuToggleEl.addEventListener("click", menuToggle);
 navProfile.addEventListener("click", () => profileEl.scrollIntoView({behavior: "smooth", block: "start"}));
