@@ -69,6 +69,7 @@ html {
 body {
     background-color: $background-color-light;
     overflow-x: hidden;
+    min-width: fit-content;
 }
 
 main, section, footer {
