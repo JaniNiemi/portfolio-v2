@@ -1,108 +1,107 @@
 .main-projects {
-    display: flex;
-    flex-direction: column;
-    max-width: 120rem;
-    margin: 0 auto;
-    color: $font-dark;
-    position: relative;
+	display: flex;
+	flex-direction: column;
+	max-width: 120rem;
+	margin: 0 auto;
+	color: $font-dark;
+	position: relative;
 
-    &__heading {
-        text-align: center;
-    }
+	&__heading {
+		text-align: center;
+	}
 
+	&__project {
+		display: flex;
+		flex-direction: row;
 
-    &__project {
-        display: flex;
-        flex-direction: row;
+		&:not(:first-of-type) {
+			margin-top: 15rem;
+		}
+	}
 
-        &:not(:first-of-type) {
-            margin-top: 15rem;
-        }
-    }
+	&__image {
+		object-fit: contain;
+		max-width: 40rem;
+		height: 100%;
+		filter: brightness(75%);
+		opacity: 0.35;
+		position: relative;
+		z-index: 1;
+		box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
+		transition: all 0.8s;
 
-    &__image {
-        object-fit: contain;
-        max-width: 40rem;
-        height: 100%;
-        filter: brightness(75%);
-        opacity: .35;
-        position: relative;
-        z-index: 1;
-        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2);
-        transition: all .8s;
+		@media screen and (max-width: $bp-large) {
+			pointer-events: none;
+		}
 
-        @media screen and (max-width: $bp-large) {
-            pointer-events: none;
-        }
+		@media screen and (max-width: $bp-medium) {
+			height: 20rem;
+			opacity: 0.07;
+		}
 
-        @media screen and (max-width: $bp-medium) {
-            height: 20rem;
-            opacity: .07;
-        }
+		&--left {
+			margin-right: -15rem;
+			margin-left: 1.5rem;
+			transform: perspective(40rem) rotateY(25deg);
+		}
 
-        &--left {
-            margin-right: -15rem;
-            margin-left: 1.5rem;
-            transform: perspective(40rem) rotateY(25deg);
-        }
+		&--right {
+			margin-left: -15rem;
+			margin-right: 1.5rem;
+			transform: perspective(40rem) rotateY(-25deg);
 
-        &--right {
-            margin-left: -15rem;
-            margin-right: 1.5rem;
-            transform: perspective(40rem) rotateY(-25deg);
+			@media screen and (max-width: $bp-medium) {
+				margin-left: auto;
+			}
+		}
 
-            @media screen and (max-width: $bp-medium) {
-                margin-left: auto;
-            }
-        }
+		&:hover {
+			z-index: 99;
+			filter: brightness(90%);
+			opacity: 0.99;
+			transform: perspective(40rem) rotateY(0) scale(1.1);
+			box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4);
+		}
+	}
 
-        &:hover {
-            z-index: 99;
-            filter: brightness(90%);
-            opacity: .99;
-            transform: perspective(40rem) rotateY(0) scale(1.1);
-            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.4);
-        }
-    }
+	&__text-container {
+		flex: 1;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		position: relative;
+		z-index: 10;
 
-    &__text-container {
-        flex: 1;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        position: relative;
-        z-index: 10;
+		@media screen and (max-width: $bp-medium) {
+			position: absolute;
+			height: 20rem;
+			text-align: center;
+			margin-right: 2rem;
+		}
+	}
 
-        @media screen and (max-width: $bp-medium) {
-            position: absolute;
-            height: 20rem;
-            text-align: center;
-            margin-right: 2rem;
-        }
-    }
+	&__client {
+		text-align: center;
+	}
 
-    &__client {
-        text-align: center;
-    }
+	&__text {
+		font-size: 1.6rem;
+	}
 
-    &__text {
-        font-size: 1.6rem;
-    }
+	&__link,
+	&__link:link,
+	&__link:visited {
+		color: $color-light-2;
+		font-size: 1.8rem;
+		text-decoration: none;
+		position: relative;
+		align-self: center;
 
-    &__link,
-    &__link:link,
-    &__link:visited {
-        color: $color-light-2;
-        font-size: 1.8rem;
-        text-decoration: none;
-        position: relative;
-        align-self: center;
+		vertical-align: middle;
+	}
 
-        vertical-align: middle
-    }
-
-    &__link {
-        @include underline;
-    }
+	&__link {
+		@include underline;
+	}
 }

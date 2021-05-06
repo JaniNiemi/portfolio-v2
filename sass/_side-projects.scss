@@ -1,125 +1,125 @@
 .side-projects {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    color: $font-white;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	color: $font-white;
 
-    @include background-image("../images/side-projects_bg.jpg");
+	@include background-image("../images/side-projects_bg.jpg");
 
-    &__heading {
-        font-size: 2.8rem;
-    }
+	&__heading {
+		font-size: 2.8rem;
+	}
 
-    &__container {
-        max-width: 120rem;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+	&__container {
+		max-width: 120rem;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
 
-    &__card {
-        width: 25rem;
-        height: 25rem;
-        margin: .5rem;
-        padding: 0.5rem;
-        background-color: rgba(#fff, 0.25);
-        border: 1px solid rgba($font-white, 0.2);
-        border-radius: 1rem;
+	&__card {
+		width: 25rem;
+		height: 25rem;
+		margin: 0.5rem;
+		padding: 0.5rem;
+		background-color: rgba(#fff, 0.25);
+		border: 1px solid rgba($font-white, 0.2);
+		border-radius: 1rem;
 
-        transition: all .3s;
+		transition: all 0.3s;
 
-        @media screen and (max-width: $bp-medium) {
-            width: 18rem;
-            height: 18rem;
-        }
+		@media screen and (max-width: $bp-medium) {
+			width: 18rem;
+			height: 18rem;
+		}
 
-        &:hover {
-            transform: scale(1.15);
-            background-color: rgba(#fff, 0.5);
-            border: 2px solid rgba($font-white, 0.7);
-            box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.8);
-        }
-    }
+		&:hover {
+			transform: scale(1.15);
+			background-color: rgba(#fff, 0.5);
+			border: 2px solid rgba($font-white, 0.7);
+			box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.8);
+		}
+	}
 
-    &__text,
-    &__text:link,
-    &__text:visited {
-        font-size: 2.4rem;
-        color: rgba($font-white, .9);
-        text-decoration: none;
+	&__text,
+	&__text:link,
+	&__text:visited {
+		font-size: 2.4rem;
+		color: rgba($font-white, 0.9);
+		text-decoration: none;
 
-        display: flex;
-        height: 100%;
-        justify-content: center;
-        align-items: center;
-        outline: none;
-        -webkit-tap-highlight-color: transparent;
+		display: flex;
+		height: 100%;
+		justify-content: center;
+		align-items: center;
+		outline: none;
+		-webkit-tap-highlight-color: transparent;
 
-        transition: all .3s;
+		transition: all 0.3s;
 
-        @media screen and (max-width: $bp-medium) {
-            font-size: 2rem;
-        }
-    }
+		@media screen and (max-width: $bp-medium) {
+			font-size: 2rem;
+		}
+	}
 
-    &__text:hover {
-        color: rgba($font-white, 1);
-    }
+	&__text:hover {
+		color: rgba($font-white, 1);
+	}
 
-    &__link-container {
-        margin-top: 2rem;
-    }
+	&__link-container {
+		margin-top: 2rem;
+	}
 
-    &__link,
-    &__link:link,
-    &__link:visited {
-        position: relative;
-        font-size: 2rem;
-        color: $color-light;
-        text-decoration: none;
-    }
+	&__link,
+	&__link:link,
+	&__link:visited {
+		position: relative;
+		font-size: 2rem;
+		color: $color-light;
+		text-decoration: none;
+	}
 
-    &__link {
-        @include underline;
-        transition: all .5s;
+	&__link {
+		@include underline;
+		transition: all 0.5s;
 
-        &:hover {
-            color: $font-white;
-        }
-    }
+		&:hover {
+			color: $font-white;
+		}
+	}
 }
 
 // BACKGROUND IMAGES
 .coach-finder {
-    @include side-project-card-bg("../images/side-projects/coach-finder.png");
+	@include side-project-card-bg("../images/side-projects/coach-finder.png");
 }
 
 .trivia-game {
-    @include side-project-card-bg("../images/side-projects/trivia-game.png");
+	@include side-project-card-bg("../images/side-projects/trivia-game.png");
 }
 
 .to-do-app {
-    @include side-project-card-bg("../images/side-projects/to-do-app.png");
+	@include side-project-card-bg("../images/side-projects/to-do-app.png");
 }
 
 .ficolo {
-    @include side-project-card-bg("../images/side-projects/ficolo-solar.png");
+	@include side-project-card-bg("../images/side-projects/ficolo-solar.png");
 }
 
 .reposaari {
-    @include side-project-card-bg("../images/side-projects/reposaarenvpk.jpg");
+	@include side-project-card-bg("../images/side-projects/reposaarenvpk.jpg");
 }
 
 .react-notes {
-    @include side-project-card-bg("../images/side-projects/reactnotes.png");
+	@include side-project-card-bg("../images/side-projects/reactnotes.png");
 }
 
 .turbo {
-    @include side-project-card-bg("../images/side-projects/turbo.png");
+	@include side-project-card-bg("../images/side-projects/turbo.png");
 }
 
 .turbo-bw {
-    @include side-project-card-bg("../images/side-projects/turbo_bw.png");
+	@include side-project-card-bg("../images/side-projects/turbo_bw.png");
 }

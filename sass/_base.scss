@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;400;500;700&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 // VARIABLES
@@ -21,65 +21,75 @@ $font-dark: rgb(15, 15, 15);
 
 // MIXINS
 @mixin underline {
-    position: relative;
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: -8px;
-        left: 0%;
-        display: block;
-        height: 3px;
-        width: 100%;
-        background-color: rgba($color-light, 1);
-        border-radius: 1rem;
-        transform: scale(0);
-        transition: all .5s;
-    }
+	position: relative;
+	&::after {
+		content: "";
+		position: absolute;
+		bottom: -8px;
+		left: 0%;
+		display: block;
+		height: 3px;
+		width: 100%;
+		background-color: rgba($color-light, 1);
+		border-radius: 1rem;
+		transform: scale(0);
+		transition: all 0.5s;
+	}
 
-    &:hover::after {
-        transform: scale(1.1);
-    }
+	&:hover::after {
+		transform: scale(1.1);
+	}
 }
 
 @mixin background-image($url) {
-    background-image:linear-gradient(rgba($color-dark, .85), rgba($color-dark, .85)), url($url);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
+	background-image: linear-gradient(
+			rgba($color-dark, 0.85),
+			rgba($color-dark, 0.85)
+		),
+		url($url);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 }
 
 @mixin side-project-card-bg($url) {
-    background-image:linear-gradient(rgba($color-dark, .8), rgba($color-dark, .8)), url($url);
-    background-size: cover;
-    background-position: center;
+	background-image: linear-gradient(
+			rgba($color-dark, 0.8),
+			rgba($color-dark, 0.8)
+		),
+		url($url);
+	background-size: cover;
+	background-position: center;
 }
 
 // RESPONSIVE BREAKPOINTS
-$bp-large: 62.5em;      //1000px
-$bp-medium: 37.5em;     //600px
+$bp-large: 62.5em; //1000px
+$bp-medium: 37.5em; //600px
 
 html {
-    font-size: 62.5%;
+	font-size: 62.5%;
 
-    @media screen and (max-width: $bp-large) {
-        font-size: 55%;
-    }
+	@media screen and (max-width: $bp-large) {
+		font-size: 55%;
+	}
 }
 
 body {
-    background-color: $background-color-light;
-    overflow-x: hidden;
-    min-width: fit-content;
+	background-color: $background-color-light;
+	overflow-x: hidden;
+	min-width: fit-content;
 }
 
-main, section, footer {
-    padding: 9rem 2rem;
+main,
+section,
+footer {
+	padding: 9rem 2rem;
 }
 
 p {
-    line-height: 1.4;
+	line-height: 1.4;
 }
 
 ::selection {
-    background-color: rgba($color-light, .5);
+	background-color: rgba($color-light, 0.5);
 }

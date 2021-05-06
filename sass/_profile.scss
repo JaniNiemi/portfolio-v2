@@ -1,102 +1,102 @@
 .profile {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    color: $font-white;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	color: $font-white;
 
-    @include background-image("../images/profile_bg.jpg");
+	@include background-image("../images/profile_bg.jpg");
 
-    &__img {
-        height: 20rem;
-        width: 20rem;
-        border-radius: 50%;
-        box-shadow: 0 1rem 5rem rgba(0, 0, 0, .2);
-        margin-bottom: 5rem;
-    }
+	&__img {
+		height: 20rem;
+		width: 20rem;
+		border-radius: 50%;
+		box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.2);
+		margin-bottom: 5rem;
+	}
 
-    &__text-container {
-        max-width: 120rem;
-    }
+	&__text-container {
+		max-width: 120rem;
+	}
 
-    &__heading {
-        margin-bottom: 2rem;
-        text-transform: uppercase;
-    }
+	&__heading {
+		margin-bottom: 2rem;
+		text-transform: uppercase;
+	}
 
-    &__text {
-        font-size: 1.8rem;
-        margin-left: 1rem;
-        margin-right: 1rem;
-        
-        &:not(:last-child) {
-            margin-bottom: 1.8rem;
-        }
-    }
+	&__text {
+		font-size: 1.8rem;
+		margin-left: 1rem;
+		margin-right: 1rem;
 
-    &__link,
-    &__link:link,
-    &__link:visited {
-        position: relative;
-        font-size: 1.8rem;
-        color: $color-light;
-        text-decoration: none;
-    }
+		&:not(:last-child) {
+			margin-bottom: 1.8rem;
+		}
+	}
 
-    &__link {
-        @include underline;
-        transition: all .5s;
+	&__link,
+	&__link:link,
+	&__link:visited {
+		position: relative;
+		font-size: 1.8rem;
+		color: $color-light;
+		text-decoration: none;
+	}
 
-        &:hover {
-            color: $font-white;
-        }
-    }
+	&__link {
+		@include underline;
+		transition: all 0.5s;
 
-    &__cta {
-        display: flex;
-        background-color: rgba($color-light, 0.8);
-        color: $font-white;
-        font-size: 2.3rem;
-        text-decoration: none;
+		&:hover {
+			color: $font-white;
+		}
+	}
 
-        margin: 4rem auto 0 auto;
-        justify-content: center;
-        align-items: center;
+	&__cta {
+		display: flex;
+		background-color: rgba($color-light, 0.8);
+		color: $font-white;
+		font-size: 2.3rem;
+		text-decoration: none;
 
-        width: 22rem;
-        height: 5rem;
-        border-radius: 2rem;
+		margin: 4rem auto 0 auto;
+		justify-content: center;
+		align-items: center;
 
-        position: relative;
-        z-index: 10;
-        transition: all 0.5s;
-        box-shadow: none;
-        cursor: pointer;
+		width: 22rem;
+		height: 5rem;
+		border-radius: 2rem;
 
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            display: block;
-            background-color: $color-light;
-            border-radius: 2rem;
-            z-index: -1;
-            opacity: 0.6;
+		position: relative;
+		z-index: 10;
+		transition: all 0.5s;
+		box-shadow: none;
+		cursor: pointer;
 
-            transition: all 0.5s;
-        }
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			display: block;
+			background-color: $color-light;
+			border-radius: 2rem;
+			z-index: -1;
+			opacity: 0.6;
 
-        &:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 1rem 1rem rgba($font-white, 0.05);
-            &::before {
-                transform: scale(1.5);
-                opacity: 0;
-            }
-        }
-    }
+			transition: all 0.5s;
+		}
+
+		&:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 1rem 1rem rgba($font-white, 0.05);
+			&::before {
+				transform: scale(1.5);
+				opacity: 0;
+			}
+		}
+	}
 }

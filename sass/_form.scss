@@ -1,91 +1,90 @@
 .form {
-    background-color: #eaf3ed;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23fefefe' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+	background-color: #eaf3ed;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23fefefe' fill-opacity='0.4' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
 
-    max-width: 50rem;
-    border-radius: 2rem;
-    padding: 2rem 3rem;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .4);
+	max-width: 50rem;
+	border-radius: 2rem;
+	padding: 2rem 3rem;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
 
-    &__heading {
-        margin-bottom: 1rem;
-    }
+	&__heading {
+		margin-bottom: 1rem;
+	}
 
-    &__input, 
-    &__message {
-        background-color: rgb(231, 231, 231);
-        padding: 1.5rem;
-        font-size: 1.7rem;
-        font-family: inherit;
-        box-sizing: border-box;
-        border: none;
-        border-bottom: 1px solid $color-primary;
-        border-radius: .5rem .5rem 0 0;
+	&__input,
+	&__message {
+		background-color: rgb(231, 231, 231);
+		padding: 1.5rem;
+		font-size: 1.7rem;
+		font-family: inherit;
+		box-sizing: border-box;
+		border: none;
+		border-bottom: 1px solid $color-primary;
+		border-radius: 0.5rem 0.5rem 0 0;
 
-        &:focus {
-            outline: 1px solid $color-primary;
-            box-shadow: 0 .4rem .7rem rgba($color-dark, .2);
-        }
-    }
+		&:focus {
+			outline: 1px solid $color-primary;
+			box-shadow: 0 0.4rem 0.7rem rgba($color-dark, 0.2);
+		}
+	}
 
-    &__input:not(:last-child) {
-        margin-bottom: 2rem;
-    }
+	&__input:not(:last-child) {
+		margin-bottom: 2rem;
+	}
 
-    &__message {
-        resize: vertical;
-    }
+	&__message {
+		resize: vertical;
+	}
 
+	&__notice {
+		margin-top: 0.2rem;
+		font-size: 1.3rem;
+	}
 
-    &__notice {
-        margin-top: .2rem;
-        font-size: 1.3rem;
-    }
+	&__btn {
+		display: block;
+		width: 12rem;
+		font-size: 2rem;
+		font-family: inherit;
+		color: $font-white;
+		background-color: $color-light;
+		border: none;
+		margin: 1.5rem auto 1rem auto;
+		padding: 1rem;
+		border-radius: 2rem;
+		cursor: pointer;
 
-    &__btn {
-        display: block;
-        width: 12rem;
-        font-size: 2rem;
-        font-family: inherit;
-        color: $font-white;
-        background-color: $color-light;
-        border: none;
-        margin: 1.5rem auto 1rem auto;
-        padding: 1rem;
-        border-radius: 2rem;
-        cursor: pointer;
+		position: relative;
+		z-index: 10;
+		transition: all 0.5s;
+		box-shadow: none;
 
-        position: relative;
-        z-index: 10;
-        transition: all 0.5s;
-        box-shadow: none;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			display: block;
+			background-color: $color-light;
+			border-radius: 2rem;
+			z-index: -1;
+			opacity: 0.6;
 
-        &::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            display: block;
-            background-color: $color-light;
-            border-radius: 2rem;
-            z-index: -1;
-            opacity: 0.6;
+			transition: all 0.5s;
+		}
 
-            transition: all 0.5s;
-        }
-
-        &:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 1rem 1rem rgba($color-dark, 0.2);
-            &::before {
-                transform: scale(1.4);
-                opacity: 0;
-            }
-        }
-    }
+		&:hover {
+			transform: translateY(-2px);
+			box-shadow: 0 1rem 1rem rgba($color-dark, 0.2);
+			&::before {
+				transform: scale(1.4);
+				opacity: 0;
+			}
+		}
+	}
 }
