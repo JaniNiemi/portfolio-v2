@@ -976,7 +976,7 @@ h3 {
   position: relative;
 }
 
-.footer__cv-container::before {
+.footer__cv-container:not(:last-child)::before {
   content: "";
   position: absolute;
   top: 50%;
@@ -987,7 +987,7 @@ h3 {
   border-radius: 1rem;
 }
 
-.footer__cv-container::after {
+.footer__cv-container:not(:last-child)::after {
   content: "";
   position: absolute;
   top: 50%;
@@ -1025,5 +1025,12 @@ h3 {
 .footer__cv:hover::after {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.footer__credit {
+  color: #fafafa;
+  font-size: 1.2rem;
+  text-decoration: none;
+  margin-top: 1.2rem;
 }
 /*# sourceMappingURL=main.css.map */
