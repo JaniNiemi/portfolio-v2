@@ -96,6 +96,12 @@
 	@include side-project-card-bg("../images/side-projects/coach-finder.png");
 }
 
+.massage-service-jane-doe {
+	@include side-project-card-bg(
+		"../images/side-projects/massage-service-jane-doe.png"
+	);
+}
+
 .trivia-game {
 	@include side-project-card-bg("../images/side-projects/trivia-game.png");
 }

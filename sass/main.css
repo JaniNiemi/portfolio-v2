@@ -728,6 +728,13 @@ h3 {
   background-position: center;
 }
 
+.massage-service-jane-doe {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 5, 0, 0.8)), to(rgba(0, 5, 0, 0.8))), url("../images/side-projects/massage-service-jane-doe.png");
+  background-image: linear-gradient(rgba(0, 5, 0, 0.8), rgba(0, 5, 0, 0.8)), url("../images/side-projects/massage-service-jane-doe.png");
+  background-size: cover;
+  background-position: center;
+}
+
 .trivia-game {
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 5, 0, 0.8)), to(rgba(0, 5, 0, 0.8))), url("../images/side-projects/trivia-game.png");
   background-image: linear-gradient(rgba(0, 5, 0, 0.8), rgba(0, 5, 0, 0.8)), url("../images/side-projects/trivia-game.png");
